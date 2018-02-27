@@ -4,7 +4,7 @@ import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Element
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root(name = "newDataSet")
+@Root(name = "NewDataSet")
 public class AtomicData {
     
     @Element(name = "Table")

@@ -62,7 +62,7 @@ public class ClientJavaWSPeriodicTable {
             AtomicDatas ads = new AtomicDatas();
             xml = getAtoms();
             serializer.read(ads, xml);
-            System.out.println(ads.get()[0].getElementName());
+            System.out.println(ads.get().get(0).getElementName());
             
             
             
