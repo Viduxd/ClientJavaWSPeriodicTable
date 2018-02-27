@@ -62,7 +62,12 @@ public class ClientJavaWSPeriodicTable {
             AtomicDatas ads = new AtomicDatas();
             xml = getAtoms();
             serializer.read(ads, xml);
-            System.out.println(ads.get().get(0).getElementName());
+            System.out.print("Los atomos de la tabla periodica son: ");
+            for (int i = 0; i < ads.get().size(); i++) {
+                System.out.println(ads.get().get(i).getElementName());
+                
+            }
+            
             
             
             
