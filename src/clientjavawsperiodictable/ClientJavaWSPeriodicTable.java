@@ -40,7 +40,7 @@ public class ClientJavaWSPeriodicTable {
         try {
             System.out.println("Introduzca el nombre del elemento: ");
             Serializer serializer = new Persister();
-            /*String atom = sc.nextLine();
+            String atom = sc.nextLine();
             String xml = getAtomicNumber(atom);
             AtomicData ad = new AtomicData();
             serializer.read(ad, xml);
@@ -60,7 +60,7 @@ public class ClientJavaWSPeriodicTable {
             System.out.println(ad.getAt().getDensity());*/
             
             AtomicDatas ads = new AtomicDatas();
-            String xml = getAtoms();
+            xml = getAtoms();
             serializer.read(ads, xml);
             System.out.println(ads.get()[0].getElementName());
             
