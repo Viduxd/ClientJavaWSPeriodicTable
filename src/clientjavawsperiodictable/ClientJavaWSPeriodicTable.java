@@ -1,12 +1,16 @@
 package clientjavawsperiodictable;
 
+import java.util.Scanner;
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+
 
 
 
 
 public class ClientJavaWSPeriodicTable {
     public static void main(String[] args) {
-        String text = "Gold";
+        /*String text = "Gold";
         String response1 = getAtomicNumber(text);
         String response2 = getElementSymbol(text);
         String response3 = getAtomicWeight(text);
@@ -30,6 +34,44 @@ public class ClientJavaWSPeriodicTable {
             String atoms = parseResponse(response3, "</ElementName>");
             System.out.println("Gold atomic weight is: " + atoms);
         }*/
+        
+        Scanner sc = new Scanner(System.in);
+        
+        try {
+            System.out.println("Introduzca el nombre del elemento: ");
+            Serializer serializer = new Persister();
+            /*String atom = sc.nextLine();
+            String xml = getAtomicNumber(atom);
+            AtomicData ad = new AtomicData();
+            serializer.read(ad, xml);
+            
+            System.out.println("El número atomico del elemento " + atom+ " es: " + ad.getAt().getAtomicNumber());
+            System.out.println("El peso atomico del elemento " + atom + " es: " + ad.getAt().getAtomicWeight());
+            System.out.println("El simbolo atomico del elemento " + atom + " es: " + ad.getAt().getSymbol());
+            /*System.out.println(ad.getAt().getAtomicNumber());
+            System.out.println(ad.getAt().getElementName());
+            System.out.println(ad.getAt().getSymbol());
+            System.out.println(ad.getAt().getAtomicWeight());
+            System.out.println(ad.getAt().getBoilingPoint());
+            System.out.println(ad.getAt().getIonisationPotential());
+            System.out.println(ad.getAt().getEletroNegativity());
+            System.out.println(ad.getAt().getAtomicRadius());
+            System.out.println(ad.getAt().getMeltingPoint());
+            System.out.println(ad.getAt().getDensity());*/
+            
+            AtomicDatas ads = new AtomicDatas();
+            String xml = getAtoms();
+            serializer.read(ads, xml);
+            System.out.println(ads.get()[0].getElementName());
+            
+            
+            
+        } catch(Exception e) {
+            System.out.println("Error: " + e);
+        }
+        
+        
+        
 
             
     }
